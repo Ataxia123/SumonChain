@@ -4,6 +4,14 @@ import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 
 const Home: NextPage = () => {
+  const url = "https://www.sumo-api.com/api";
+  const rikishi = () => {
+    fetch(url + "/rikishis")
+      .then(response => response.json())
+      .then(data => console.log(data));
+  };
+  rikishi();
+
   return (
     <>
       <MetaHeader />
